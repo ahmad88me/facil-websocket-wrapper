@@ -53,13 +53,23 @@ endif()
 
 include_directories("include" "/usr/local/include")
 
-include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib")
-include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil")
-include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/http")
-include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/fiobj")
-include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/cli")
-include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/legacy")
-include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/tls")
+
+
+include_directories("/usr/local/include")
+include_directories("/usr/local/include/facil")
+include_directories("/usr/local/include/facil/http")
+include_directories("/usr/local/include/facil/fiobj")
+include_directories("/usr/local/include/facil/cli")
+include_directories("/usr/local/include/facil/legacy")
+include_directories("/usr/local/include/facil/tls")
+
+#include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib")
+#include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil")
+#include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/http")
+#include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/fiobj")
+#include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/cli")
+#include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/legacy")
+#include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/tls")
 
 
 add_executable("${PROJECT_NAME}" "${SOURCES}" "${HEADERS}")
