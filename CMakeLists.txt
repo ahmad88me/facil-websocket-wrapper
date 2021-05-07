@@ -14,17 +14,6 @@ target_link_libraries(mylibs "-L/usr/local/lib/")
 
 target_link_libraries(mylibs "/usr/local/lib/libfacil.io.a")
 
-#target_link_libraries(mylibs "/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/build/libfacil.io.a")
-#target_link_libraries(mylibs "/usr/local/lib/getoptpp/libgetopt_pp.a")
-#target_link_libraries(mylibs "/usr/local/lib/libmitie.a")
-#target_link_libraries(mylibs "/usr/local/lib/SmarTerp/libSmarTerpLookup.a")
-#target_link_libraries(mylibs -lmitie)
-
-
-#set(SOURCES
-#    src/main.cpp
-#    src/br_tokenizer.cpp
-#    src/nlp.cpp)
 
 set(SOURCES
     src/main.cpp
@@ -32,9 +21,7 @@ set(SOURCES
 
 set(HEADERS
     include/websocketwrapper.hpp)
-#set(HEADERS
-#    include/br_tokenizer.hpp
-#    include/nlp.hpp)
+
 
 
 
@@ -74,6 +61,11 @@ include_directories("/usr/local/include/facil/tls")
 #include_directories("/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/lib/facil/tls")
 
 
+
+# Rename
+set_target_properties(mylibs PROPERTIES OUTPUT_NAME "websocketwrapper")
+
+
 add_executable("${PROJECT_NAME}" "${SOURCES}" "${HEADERS}")
 
 target_link_libraries("${PROJECT_NAME}" mylibs)
@@ -85,4 +77,13 @@ target_link_libraries("${PROJECT_NAME}" mylibs)
 ##install(TARGETS "${PROJECT_NAME}" DESTINATION lib/SmarTerp)
 #install(FILES include/nlp.hpp DESTINATION include/SmarTerp)
 
+
+
+include(GNUInstallDirs)
+#install(TARGETS mylibs DESTINATION lib)
+##install(TARGETS "${PROJECT_NAME}" DESTINATION lib)
+#add_library(websocketwrapper mylibs)
+#install(TARGETS mylibs DESTINATION lib RENAME "websocketwrapper")
+install(TARGETS mylibs DESTINATION lib)
+install(FILES include/websocketwrapper.hpp DESTINATION include)
 
