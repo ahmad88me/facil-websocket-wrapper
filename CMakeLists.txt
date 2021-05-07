@@ -12,7 +12,9 @@ target_link_libraries(mylibs -lpthread)
 #target_link_libraries(mylibs -lhdt)
 target_link_libraries(mylibs "-L/usr/local/lib/")
 
-target_link_libraries(mylibs "/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/build/libfacil.io.a")
+target_link_libraries(mylibs "/usr/local/lib/libfacil.io.a")
+
+#target_link_libraries(mylibs "/Users/aalobaid/workspaces/Cworkspace/facil.io-0.7.5/build/libfacil.io.a")
 #target_link_libraries(mylibs "/usr/local/lib/getoptpp/libgetopt_pp.a")
 #target_link_libraries(mylibs "/usr/local/lib/libmitie.a")
 #target_link_libraries(mylibs "/usr/local/lib/SmarTerp/libSmarTerpLookup.a")
